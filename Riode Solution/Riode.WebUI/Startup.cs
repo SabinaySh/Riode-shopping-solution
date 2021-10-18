@@ -24,7 +24,10 @@ namespace Riode.WebUI
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseStaticFiles();
+
             app.UseRouting();
+
             app.UseEndpoints(cfg =>
             {
                 cfg.MapControllerRoute("default","{controller}/{action}/{id?}",
